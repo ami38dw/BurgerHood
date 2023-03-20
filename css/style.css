@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #b79f1970;
+    background-image: url('/img/logoBH.jpeg');
+    background-size: contain;
+    background-repeat: repeat;
+}
+.mainCont{
+    position: relative;
+}
+#container{
+    width: 90%;
+    height: 100%;
+    margin: 0px 5%;
+    padding-top: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid #fbca54 2px;
+    border-radius: 5px;
+    background-color: #b79f1970;
+}
+.item{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 12px 20px;
+    border: black 2px solid;
+    border-radius: 8px;
+    background-color: #b79f1970;
+    position: relative;
+    overflow: visible;
+}
+.imgburg{
+    /* width: 35%; */
+    height: 100%;
+    position: relative;
+}
+.item-title{
+    width: 60%;
+    height: 30%;
+    font-size: 1.3em;
+    color: #1a1a1a;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+/* .item-title 13{
+    font-size: 1.2em;
+} */
+.commands{
+    width: 60%;
+    height: 10px;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form{
+    display:inline-flex;
+}
+.esp{
+    display:none;
+}
+.extra{
+    border: solid #fbc954d6 1px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 300;
+    direction: none;
+    width:35%;
+}
+.btnAgregar{
+    border: solid #fbc954d6 1px;
+    background-color: #fbc954d4;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+.btnAgregarCP{
+    border: solid #fbc954d6 1px;
+    background-color: #d6ab48df;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.tot{
+    width:100%;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    padding: 0% 5%;
+}
+#totBtn{
+    width:60%;
+    height: 40px;
+    margin: 5px 0%;
+    background-color: #fbc954d6;
+    border-radius: 8px;
+    font-size: 1.5em;
+}
+#terminarOrden{
+    width:90%;
+    height: 40px;
+    margin: 5px 0%;
+    background-color: #fbc954d4;
+    border-radius: 8px;
+    font-size: 1.5em;
+    margin: 0px 21px;
+    /* margin-left: 30px; */
+}
+.btnTermOrd{
+    background-color: #fbc954d4;
+}
+#verOrds{
+    width: 40%;
+    height: 40px;
+    margin: 5px 0%;
+    background-color: #fbc954d6;
+    border-radius: 8px;
+    font-size: 1em;
+}
+.totComanda{
+    text-align: end;
+}
+.comanda{
+    text-align:  flex-start;
+}
+#offcanvas-body{
+    background-color: #b79f1970;
+    font-size: 1em;
+    height: auto;
+}
+.offcanvas-header{
+    background-color: #fbc954d4;
+    font-weight: bold;
+}
+#offcanvasTopLabel{
+    font-size: 1.5em;
+    font-weight: 600;
+}

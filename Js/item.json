@@ -1,0 +1,114 @@
+[
+    {
+     "name": "Hood",
+     "nameData": "Hood",
+     "precio": 300,
+     "id": "01",
+     "img": "img/hood.jpg",
+     "especial": false
+    },
+    {
+     "name": "Yankee",
+     "nameData": "Yankee",
+     "precio": 280,
+     "id": "02",
+     "img": "img/yankee.jpg",
+     "especial": false
+    },
+    {
+     "name": "A y C",
+     "nameData": "AyC",
+     "precio": 290,
+     "id": "03",
+     "img": "img/ayc.jpg",
+     "especial": false
+    },
+    {
+     "name": "Cheese",
+     "nameData": "Cheese",
+     "precio": 290,
+     "id": "04",
+     "img": "",
+     "especial": false
+    },
+    {
+     "name": "Red hot",
+     "nameData": "RedHot",
+     "precio": 280,
+     "id": "05",
+     "img": "",
+     "especial": false
+    },
+    {
+     "name": "Oklahoma",
+     "nameData": "Oklahoma",
+     "precio": 360,
+     "id": "06",
+     "img": "",
+     "especial": true
+    },
+    {
+     "name": "Patty Melt",
+     "nameData": "PattyMelt",
+     "precio": 370,
+     "id": "07",
+     "img": "img/patty.jpg",
+     "especial": true
+    },
+    {
+     "name": "Pulled Pork",
+     "nameData": "PulledPork",
+     "precio": 250,
+     "id": "08",
+     "img": "img/pulledPork.jpg",
+     "especial": true
+    },
+    {
+     "name": "Monster",
+     "nameData": "Monster",
+     "precio": 330,
+     "id": "09",
+     "img": "",
+     "especial": true
+    },
+    {
+     "name": "Veggie",
+     "nameData": "Veggie",
+     "precio": 230,
+     "id": "10",
+     "img": "",
+     "especial": false
+    },
+    {
+     "name": "Kid",
+     "nameData": "Kid",
+     "precio": 200,
+     "id": "11",
+     "img": "",
+     "especial": false
+    },
+    {
+    "name": "Porcion Papas",
+    "nameData": "PorcionPapas",
+    "precio": 125,
+    "id": "12",
+     "img": "",
+     "especial": false
+    },
+    {
+    "name": "Porcion Pulled",
+    "nameData": "PorcionPulled",
+    "precio": 200,
+    "id": "13",
+     "img": "img/porcion pulled.jpg",
+     "especial": false
+    },
+    {
+    "name": "Bebida",
+    "nameData": "Bebida",
+    "precio": 80,
+    "id": "14",
+    "img": "",
+    "especial": false
+    }
+   ]
