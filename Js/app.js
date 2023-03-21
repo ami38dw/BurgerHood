@@ -25,15 +25,15 @@ fetch(url)
 
             contMain.innerHTML += `
             <div id="${burg.id}-div" class="item ${burg.id}">
-                <img src="${burg.img}" class="imgburg">
-                <div class="item-title ${burg.id}">
+                <img src="${burg.img}" class="imgburg col-4">
+                <div class="item-title ${burg.id} col-8">
                     <h2>${burg.name}</h2>
                 </div>
-                <div class='commands' id="${burg.id}">
+                <div class='commands col-7' id="${burg.id}">
                     <form id="commandsForm-${burg.id}" action="" method="POST" class="column form">
                         <button type="submit" name="ag" class="btnAgregar" data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btnAgregarCP esp" data-price="${burg.precio}+50" data-name="${burg.nameData}" >Agregar c/p </button>
-                        <input id="extraC-${burg.nameData}" name="extCarne" class="extra esp" type="number" placeholder="Carne extra" list="exC" ></input>
+                        <button type="submit" name="agcp" class="btnAgregarCP esp d-none" data-price="${burg.precio}+50" data-name="${burg.nameData}" >Agregar c/p </button>
+                        <input id="extraC-${burg.nameData}" name="extCarne" class="extra esp d-none" type="number" placeholder="Carne extra" list="exC" ></input>
                         <datalist id="exC">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -48,11 +48,11 @@ fetch(url)
         }else{
             contMain.innerHTML += `
             <div id="${burg.id}-div" class="item ${burg.id}">
-                <img src="${burg.img}" class="imgburg">
-                <div class="item-title ${burg.id}">
+                <img src="${burg.img}" class="imgburg col-4">
+                <div class="item-title ${burg.id} col-6">
                     <h2>${burg.name}</h2>
                 </div>
-                <div class='commands' id="${burg.id}">
+                <div class='commands col-7' id="${burg.id}">
                     <form id="commandsForm-${burg.id}" action="" method="POST" class="column form">
                         <button type="submit" name="ag" class="btnAgregar " data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
                         <button type="submit" name="agcp" class="btnAgregarCP " data-price="${burg.precio}+50" data-name="${burg.nameData}">Agregar c/p </button>

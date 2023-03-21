@@ -66,9 +66,9 @@ body{
 .form{
     display:inline-flex;
 }
-.esp{
+/* .esp{
     display:none;
-}
+} */
 .extra{
     border: solid #fbc954d6 1px;
     border-radius: 5px;
