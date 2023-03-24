@@ -8,7 +8,7 @@ let CarExtra = document.querySelector('.extra');
 let arrayEspeciales = [];
 let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled'];
 let fshord = document.querySelector('#totBtn');
-let offCBody = document.querySelector('#offcanvas-body');
+let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden')
 // console.log(contMain)
 
 
@@ -89,7 +89,7 @@ fetch(url)
         
         // Boton para agregar hamburgesa
         form.firstElementChild[0].addEventListener('click', ()=>{
-            
+            // orden = [];
             namedata = form.firstElementChild[0].dataset.namedata
             extC = document.querySelector(`#extraC-${namedata}`).value
             console.log(namedata);
@@ -121,7 +121,7 @@ fetch(url)
         
         // Boton para agregar hamburgesa con papas
         form.firstElementChild[1].addEventListener('click', ()=>{
-            
+            // orden = [];
             namedata = form.firstElementChild[0].dataset.namedata
             extC = document.querySelector(`#extraC-${namedata}`).value
             
@@ -153,7 +153,7 @@ fetch(url)
         
     });
     // console.log(formsList);
-
+    // let totDia = 0;
     fshord.addEventListener('click', ()=>{
         localStorage.setItem('Orden',JSON.stringify(orden));
         let tot = 0;
@@ -163,17 +163,42 @@ fetch(url)
             tot += parseInt(com.precio)
             ornedToAppend += `${com.hamburgesa} +${com.carneExtra} carne &emsp;&emsp;$${com.precio} <br>`
         }
-        offCBody.innerHTML += `
+        // totDia += tot;
+        offCBody.innerHTML = `
         <div class="comanda">
             ${ornedToAppend}
         </div>
         <br><hr><br> 
         <div class="totComanda">
             Total= $${tot}<br> Debito= $${tot*1.05}
-        </div><br>`
+        </div><br>`;
+        ornedToAppend = '';
     })
     
+    termOrd.addEventListener('click',()=>{
+        // localStorage.setItem('ordenes', orden)
+        console.log(localStorage.getItem('ordenes'))
+        if(localStorage.getItem('ordenes') === null){
+            offCBody.innerHTML = '';
+            let ordenes = [];
+            orden.forEach(comm =>{
+                ordenes.push(comm)
+            })
+            localStorage.setItem('ordenes',JSON.stringify(ordenes))
+        }else{
+            let ordenes = JSON.parse(localStorage.getItem('ordenes'))
+            offCBody.innerHTML = '';
+            orden.forEach(comm =>{
+                ordenes.push(comm)
+            })
+            localStorage.setItem('ordenes','')
+            localStorage.setItem('ordenes',JSON.stringify(ordenes))
+        }
+    })
+    // listaOrds.addEventListener('click',()=>{})
    
 
 
-});
+})
+// .then(()=>{
+// })
