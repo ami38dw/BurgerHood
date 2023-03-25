@@ -183,26 +183,26 @@ fetch(url)
     })
     
     termOrd.addEventListener('click',()=>{
-        console.log(localStorage.getItem('ordenes'))
         if(localStorage.getItem('ordenes') === null){
             let ordenes = [];
             orden.forEach(comm =>{
                 ordenes.push(comm)
             })
-            localStorage.setItem('ordenes',JSON.stringify(ordenes))
+            // localStorage.setItem('ordenes',JSON.stringify(ordenes))
+            sessionStorage.setItem('ordenes',JSON.stringify(ordenes))
             orden = [];
         }else{
             let ordenes = JSON.parse(localStorage.getItem('ordenes'))
             orden.forEach(comm =>{
                 ordenes.push(comm)
             })
-            localStorage.setItem('ordenes','')
-            localStorage.setItem('ordenes',JSON.stringify(ordenes))
+            sessionStorage.setItem('ordenes','')
+            sessionStorage.setItem('ordenes',JSON.stringify(ordenes))
             orden = [];
         }
     })
     listaOrds.addEventListener('click',()=>{
-        ordenes = JSON.parse(localStorage.getItem('ordenes'));
+        ordenes = JSON.parse(sessionStorage.getItem('ordenes'));
         if (ordenes === []){
             offCOrds.innerHTML = 'No hay ordenes guardadas'
         }else {
