@@ -159,6 +159,7 @@ fetch(url)
         let tot = 0;
         let ornedToAppend = '';
 
+        offCBody.innerHTML = '';
         for (com of orden){
             tot += parseInt(com.precio)
             ornedToAppend += `${com.hamburgesa} +${com.carneExtra} carne &emsp;&emsp;$${com.precio} <br>`
@@ -172,27 +173,26 @@ fetch(url)
         <div class="totComanda">
             Total= $${tot}<br> Debito= $${tot*1.05}
         </div><br>`;
-        ornedToAppend = '';
     })
     
     termOrd.addEventListener('click',()=>{
         // localStorage.setItem('ordenes', orden)
         console.log(localStorage.getItem('ordenes'))
         if(localStorage.getItem('ordenes') === null){
-            offCBody.innerHTML = '';
             let ordenes = [];
             orden.forEach(comm =>{
                 ordenes.push(comm)
             })
             localStorage.setItem('ordenes',JSON.stringify(ordenes))
+            orden = [];
         }else{
             let ordenes = JSON.parse(localStorage.getItem('ordenes'))
-            offCBody.innerHTML = '';
             orden.forEach(comm =>{
                 ordenes.push(comm)
             })
             localStorage.setItem('ordenes','')
             localStorage.setItem('ordenes',JSON.stringify(ordenes))
+            orden = [];
         }
     })
     // listaOrds.addEventListener('click',()=>{})
