@@ -66,9 +66,6 @@ body{
 .form{
     display:inline-flex;
 }
-/* .esp{
-    display:none;
-} */
 .extra{
     border: solid #fbc954d6 1px;
     border-radius: 5px;
@@ -120,6 +117,9 @@ body{
 .btnTermOrd{
     background-color: #fbc954d4;
 }
+#offcanvasTop{
+    height: 65vh;
+}
 #verOrds{
     width: 40%;
     height: 40px;
@@ -140,10 +140,19 @@ body{
     height: auto;
 }
 .offcanvas-header{
-    background-color: #fbc954d4;
+    background-color: #fbc954e6;
     font-weight: bold;
 }
 #offcanvasTopLabel{
     font-size: 1.5em;
     font-weight: 600;
+}
+.totDia{
+    font-size: 1.8em;
+    font-weight: 550;
+}
+.offcanvas-body-ordenes{
+    background-color: #b79f1970;
+    font-size: 1em;
+    height: auto;
 }

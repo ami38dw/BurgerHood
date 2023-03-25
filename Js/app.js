@@ -6,9 +6,12 @@ let btnAgregear = document.querySelector('.btnAgregar');
 let btnAgregearCP = document.querySelector('.btnAgregarCP');
 let CarExtra = document.querySelector('.extra');
 let arrayEspeciales = [];
-let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled'];
 let fshord = document.querySelector('#totBtn');
-let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden')
+let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden'), offCOrds = document.querySelector('.offcanvas-body-ordenes')
+
+// Array para los controles especiales
+let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza'];
+
 // console.log(contMain)
 
 
@@ -87,7 +90,7 @@ fetch(url)
             e.preventDefault();
         })
         
-        // Boton para agregar hamburgesa
+        // Boton para agregar hamburgesa ------------------------------------------
         form.firstElementChild[0].addEventListener('click', ()=>{
             // orden = [];
             namedata = form.firstElementChild[0].dataset.namedata
@@ -96,6 +99,7 @@ fetch(url)
 
             if(extC === ''){
                 orden.push({
+                    'namedata': namedata,
                     'hamburgesa': namedata,
                     'precio': form.firstElementChild[0].dataset.price,
                     'carneExtra': 0,
@@ -103,12 +107,14 @@ fetch(url)
             }else {
                 if(arrayEspeciales.includes(namedata)){   
                     orden.push({
+                        'namedata': namedata,
                         'hamburgesa': namedata,
                         'precio': parseInt(form.firstElementChild[0].dataset.price)+130*extC,
                         'carneExtra': extC,
                     })
                 }else {
                     orden.push({
+                        'namedata': namedata,
                         'hamburgesa': namedata,
                         'precio': parseInt(form.firstElementChild[0].dataset.price)+65*extC,
                         'carneExtra': extC,
@@ -119,7 +125,7 @@ fetch(url)
             console.log(orden);
         });
         
-        // Boton para agregar hamburgesa con papas
+        // Boton para agregar hamburgesa con papas----------------------------------
         form.firstElementChild[1].addEventListener('click', ()=>{
             // orden = [];
             namedata = form.firstElementChild[0].dataset.namedata
@@ -127,6 +133,7 @@ fetch(url)
             
             if(extC === ''){
                 orden.push({
+                    'namedata': namedata,
                     'hamburgesa': namedata + ' c/p',
                     'precio': parseInt(form.firstElementChild[0].dataset.price)+50,
                     'carneExtra': 0,
@@ -134,12 +141,14 @@ fetch(url)
             }else {
                 if(arrayEspeciales.includes(namedata)){   
                     orden.push({
+                        'namedata': namedata,
                         'hamburgesa': namedata+' c/p',
                         'precio': parseInt(form.firstElementChild[0].dataset.price)+(130*extC)+50,
                         'carneExtra': extC,
                     })
                 }else {
                     orden.push({
+                        'namedata': namedata,
                         'hamburgesa': namedata + ' c/p',
                         'precio': parseInt(form.firstElementChild[0].dataset.price)+(65*extC)+50,
                         'carneExtra': extC,
@@ -153,7 +162,6 @@ fetch(url)
         
     });
     // console.log(formsList);
-    // let totDia = 0;
     fshord.addEventListener('click', ()=>{
         localStorage.setItem('Orden',JSON.stringify(orden));
         let tot = 0;
@@ -164,7 +172,6 @@ fetch(url)
             tot += parseInt(com.precio)
             ornedToAppend += `${com.hamburgesa} +${com.carneExtra} carne &emsp;&emsp;$${com.precio} <br>`
         }
-        // totDia += tot;
         offCBody.innerHTML = `
         <div class="comanda">
             ${ornedToAppend}
@@ -176,7 +183,6 @@ fetch(url)
     })
     
     termOrd.addEventListener('click',()=>{
-        // localStorage.setItem('ordenes', orden)
         console.log(localStorage.getItem('ordenes'))
         if(localStorage.getItem('ordenes') === null){
             let ordenes = [];
@@ -195,7 +201,21 @@ fetch(url)
             orden = [];
         }
     })
-    // listaOrds.addEventListener('click',()=>{})
+    listaOrds.addEventListener('click',()=>{
+        ordenes = JSON.parse(localStorage.getItem('ordenes'));
+        if (ordenes === []){
+            offCOrds.innerHTML = 'No hay ordenes guardadas'
+        }else {
+            let totDia = 0, contToAppend = '';
+            ordenes.forEach(comm => {
+                totDia += parseInt(comm.precio)
+                contToAppend += `${comm.hamburgesa} +${comm.carneExtra} carne &emsp;&emsp;$${comm.precio} <br><hr>`
+
+            })
+            offCOrds.innerHTML = `<br><span class='totDia'>&emsp;Total del dia $${totDia}</span><br><hr><br>
+            ${contToAppend} `
+        }
+    })
    
 
 

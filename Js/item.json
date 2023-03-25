@@ -110,5 +110,13 @@
     "id": "14",
     "img": "",
     "especial": false
+    },
+    {
+    "name": "Cerveza",
+    "nameData": "Cerveza",
+    "precio": 100,
+    "id": "15",
+    "img": "",
+    "especial": false
     }
    ]
