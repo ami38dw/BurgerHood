@@ -12,9 +12,6 @@ let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.q
 // Array para los controles especiales
 let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza'];
 
-// console.log(contMain)
-
-
 
 fetch(url)
 .then(response => response.json())
@@ -22,8 +19,10 @@ fetch(url)
     console.log(data);
 
     contMain.innerHTML = ``;
+    // Agrega los items del json al html
     for (let burg of data) {
         // console.log(burg);
+        // aca se genera los items con los comandos especiales
         if(comandosEspeciales.includes(burg.nameData)){
 
             contMain.innerHTML += `
@@ -49,6 +48,7 @@ fetch(url)
             `
             
         }else{
+            // aca se genera los items normales
             contMain.innerHTML += `
             <div id="${burg.id}-div" class="item ${burg.id}">
                 <img src="${burg.img}" class="imgburg col-4">
@@ -78,11 +78,9 @@ fetch(url)
 
 
     let $forms = document.querySelectorAll('div.commands')
-    // console.log($forms);
     let orden = [];
     let extC = undefined;
     let namedata = undefined;
-    let btnAgregar = undefined;
 
     
     $forms.forEach(form =>{
@@ -92,7 +90,6 @@ fetch(url)
         
         // Boton para agregar hamburgesa ------------------------------------------
         form.firstElementChild[0].addEventListener('click', ()=>{
-            // orden = [];
             namedata = form.firstElementChild[0].dataset.namedata
             extC = document.querySelector(`#extraC-${namedata}`).value
             console.log(namedata);
@@ -127,7 +124,6 @@ fetch(url)
         
         // Boton para agregar hamburgesa con papas----------------------------------
         form.firstElementChild[1].addEventListener('click', ()=>{
-            // orden = [];
             namedata = form.firstElementChild[0].dataset.namedata
             extC = document.querySelector(`#extraC-${namedata}`).value
             
@@ -161,9 +157,9 @@ fetch(url)
         
         
     });
-    // console.log(formsList);
+    // Boton de terminar la orden
     fshord.addEventListener('click', ()=>{
-        localStorage.setItem('Orden',JSON.stringify(orden));
+        sessionStorage.setItem('Orden',JSON.stringify(orden));
         let tot = 0;
         let ornedToAppend = '';
 
@@ -181,18 +177,17 @@ fetch(url)
             Total= $${tot}<br> Debito= $${tot*1.05}
         </div><br>`;
     })
-    
+    // Boton para terminar la comanda y guardarla en el sessionStorage
     termOrd.addEventListener('click',()=>{
-        if(localStorage.getItem('ordenes') === null){
+        if(sessionStorage.getItem('ordenes') === null){
             let ordenes = [];
             orden.forEach(comm =>{
                 ordenes.push(comm)
             })
-            // localStorage.setItem('ordenes',JSON.stringify(ordenes))
             sessionStorage.setItem('ordenes',JSON.stringify(ordenes))
             orden = [];
         }else{
-            let ordenes = JSON.parse(localStorage.getItem('ordenes'))
+            let ordenes = JSON.parse(sessionStorage.getItem('ordenes'))
             orden.forEach(comm =>{
                 ordenes.push(comm)
             })
@@ -201,6 +196,7 @@ fetch(url)
             orden = [];
         }
     })
+    // Boton para ver el listado de las comandas del dia
     listaOrds.addEventListener('click',()=>{
         ordenes = JSON.parse(sessionStorage.getItem('ordenes'));
         if (ordenes === []){
