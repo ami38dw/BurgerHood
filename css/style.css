@@ -5,7 +5,7 @@
 }
 body{
     background-color: #b79f1970;
-    background-image: url('img/logoBH.jpg');
+    background-image: url('../img/logoBH.jpg');
     background-size: contain;
     background-repeat: repeat;
 }
