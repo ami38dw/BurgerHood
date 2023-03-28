@@ -16,7 +16,7 @@ let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza'];
 fetch(url)
 .then(response => response.json())
 .then(data => {
-    console.log(data);
+    // console.log(data);
 
     contMain.innerHTML = ``;
     // Agrega los items del json al html
@@ -119,7 +119,7 @@ fetch(url)
                 }
             }
             
-            console.log(orden);
+            // console.log(orden);
         });
         
         // Boton para agregar hamburgesa con papas----------------------------------
@@ -152,7 +152,7 @@ fetch(url)
                 }
             }
             
-                console.log(orden);
+                // console.log(orden);
         });
         
         
@@ -202,11 +202,12 @@ fetch(url)
     })
     // Boton para ver el listado de las comandas del dia
     listaOrds.addEventListener('click',()=>{
-        let sumParcial = 0, totDia = 0;
+        let totDia = 0;
         let ordenes = JSON.parse(sessionStorage.getItem('ordenes')), contToAppend = '';
 
         divCommandasDia.innerHTML = ' ';
         ordenes.forEach(comm => {
+            let sumParcial = 0
             if(comm.length > 1){
                 contToAppend = '';
                 comm.forEach(burg => {
