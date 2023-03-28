@@ -7,7 +7,7 @@ let btnAgregearCP = document.querySelector('.btnAgregarCP');
 let CarExtra = document.querySelector('.extra');
 let arrayEspeciales = [];
 let fshord = document.querySelector('#totBtn');
-let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden'), offCOrds = document.querySelector('.offcanvas-body-ordenes')
+let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden'), offCOrds = document.querySelector('.offcanvas-body-ordenes'),divTotDia = document.querySelector('.totDia'), divCommandasDia = document.querySelector('.comandasDia')
 
 // Array para los controles especiales
 let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza'];
@@ -165,17 +165,22 @@ fetch(url)
 
         offCBody.innerHTML = '';
         for (com of orden){
+            if(com.carneExtra === 0){
+                ornedToAppend += `${com.hamburgesa} &emsp;&emsp;$${com.precio} <br>`
+            }else{
+                ornedToAppend += `${com.hamburgesa} +${com.carneExtra} carne &emsp;&emsp;$${com.precio} <br>`
+            }
             tot += parseInt(com.precio)
-            ornedToAppend += `${com.hamburgesa} +${com.carneExtra} carne &emsp;&emsp;$${com.precio} <br>`
         }
         offCBody.innerHTML = `
         <div class="comanda">
-            ${ornedToAppend}
+        ${ornedToAppend}
         </div>
         <br><hr><br> 
         <div class="totComanda">
-            Total= $${tot}<br> Debito= $${tot*1.05}
+        Total= $${tot}<br> Debito= $${tot*1.05}
         </div><br>`;
+        ornedToAppend = ''
     })
     // Boton para terminar la comanda y guardarla en el sessionStorage
     termOrd.addEventListener('click',()=>{
@@ -191,25 +196,61 @@ fetch(url)
             orden.forEach(comm =>{
                 ordenes.push(comm)
             })
+            // ordenes.push(orden);
             sessionStorage.setItem('ordenes','')
             sessionStorage.setItem('ordenes',JSON.stringify(ordenes))
             orden = [];
         }
     })
     // Boton para ver el listado de las comandas del dia
+    let totDia = 0;
     listaOrds.addEventListener('click',()=>{
-        ordenes = JSON.parse(sessionStorage.getItem('ordenes'));
-        if (ordenes === []){
-            offCOrds.innerHTML = 'No hay ordenes guardadas'
-        }else {
-            let totDia = 0, contToAppend = '';
-            ordenes.forEach(comm => {
-                totDia += parseInt(comm.precio)
-                contToAppend += `${comm.hamburgesa} +${comm.carneExtra} carne &emsp;&emsp;$${comm.precio} <br><hr>`
+        let sumParcial = 0;
+        // ordenes = JSON.parse(sessionStorage.getItem('ordenes'));
+        // if (ordenes === null){
+        //     offCOrds.innerHTML = 'No hay ordenes guardadas'
+        // }else {
+        //     let totDia = 0, contToAppend = '';
+        //     ordenes.forEach(comm => {
+        //         totDia += parseInt(comm.precio)
+        //         contToAppend += `${comm.hamburgesa} +${comm.carneExtra} carne &emsp;&emsp;$${comm.precio} <br><br>`
 
+        //     })
+        //     offCOrds.innerHTML = `<br><span class='totDia'>&emsp;&emsp;Total del dia $${totDia}</span><br><hr><br>
+        //     ${contToAppend} <hr>`
+        // }
+        let ordenSS = JSON.parse(sessionStorage.getItem('Orden')), ordenes = JSON.parse(sessionStorage.getItem('ordenes')), contToAppend = '';
+
+        console.log(ordenes)
+        if (ordenSS.length>1){
+            contToAppend = '';
+            ordenSS.forEach(comm => {
+                if(comm.carneExtra === 0){
+                    contToAppend += `${comm.hamburgesa} &emsp;&emsp;$${comm.precio} <br>`    
+                }else{
+                    contToAppend += `${comm.hamburgesa} +${comm.carneExtra} carne &emsp;&emsp;$${comm.precio} <br>`
+                }
+                totDia += parseInt(comm.precio)
+                sumParcial += parseInt(comm.precio)
             })
-            offCOrds.innerHTML = `<br><span class='totDia'>&emsp;Total del dia $${totDia}</span><br><hr><br>
-            ${contToAppend} `
+            divTotDia.innerHTML = `Total del dia $${totDia}`
+            divCommandasDia.innerHTML += `<hr><div>${contToAppend} <span class='sumParcial'> Sub Total $${sumParcial}</span></div><hr>`
+            contToAppend = '';
+        }else {
+            if (ordenes === null){
+                    divCommandasDia.innerHTML = 'No hay ordenes guardadas'
+                }else {
+                    contToAppend = '';
+                    if(ordenSS[0].carneExtra === 0){
+                        contToAppend += `${ordenSS[0].hamburgesa} &emsp;&emsp;$${ordenSS[0].precio} <br>`
+                    }else{
+                        contToAppend += `${ordenSS[0].hamburgesa} +${ordenSS[0].carneExtra} carne &emsp;&emsp;$${ordenSS[0].precio} <br>`
+                    }
+                    totDia += parseInt(ordenSS[0].precio)
+                    divTotDia.innerHTML = `Total del dia $${totDia}`
+                    divCommandasDia.innerHTML += `<hr><br>${contToAppend} <hr>`
+                }
+                contToAppend = '';
         }
     })
    

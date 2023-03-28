@@ -52,9 +52,6 @@ body{
     text-align: center;
     position: relative;
 }
-/* .item-title 13{
-    font-size: 1.2em;
-} */
 .commands{
     width: 60%;
     height: 10px;
@@ -150,9 +147,18 @@ body{
 .totDia{
     font-size: 1.8em;
     font-weight: 550;
+    text-align:  end;
+    margin-right: 5%;
+}
+.comandasDia{
+    padding: 0% 5%;
 }
 .offcanvas-body-ordenes{
     background-color: #b79f1970;
     font-size: 1em;
     height: auto;
+    overflow-y: scroll;
+}
+.sumParcial{
+    margin-left: 65%;
 }
