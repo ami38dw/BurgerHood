@@ -2,7 +2,7 @@
     {
      "name": "Hood",
      "nameData": "Hood",
-     "precio": 300,
+     "precio": 320,
      "id": "01",
      "img": "img/hood.jpg",
      "especial": false
@@ -10,7 +10,7 @@
     {
      "name": "Yankee",
      "nameData": "Yankee",
-     "precio": 280,
+     "precio": 290,
      "id": "02",
      "img": "img/yankee.jpg",
      "especial": false
@@ -26,9 +26,9 @@
     {
      "name": "Cheese",
      "nameData": "Cheese",
-     "precio": 290,
+     "precio": 300,
      "id": "04",
-     "img": "",
+     "img": "img/Cheese.jpg",
      "especial": false
     },
     {
@@ -42,15 +42,15 @@
     {
      "name": "Oklahoma",
      "nameData": "Oklahoma",
-     "precio": 360,
+     "precio": 375,
      "id": "06",
-     "img": "",
+     "img": "img/oklahoma.jpg",
      "especial": true
     },
     {
      "name": "Patty Melt",
      "nameData": "PattyMelt",
-     "precio": 370,
+     "precio": 385,
      "id": "07",
      "img": "img/patty.jpg",
      "especial": true
@@ -66,15 +66,15 @@
     {
      "name": "Monster",
      "nameData": "Monster",
-     "precio": 330,
+     "precio": 345,
      "id": "09",
-     "img": "",
+     "img": "img/monster.jpg",
      "especial": true
     },
     {
      "name": "Veggie",
      "nameData": "Veggie",
-     "precio": 230,
+     "precio": 250,
      "id": "10",
      "img": "",
      "especial": false
@@ -82,7 +82,7 @@
     {
      "name": "Kid",
      "nameData": "Kid",
-     "precio": 200,
+     "precio": 210,
      "id": "11",
      "img": "",
      "especial": false
@@ -100,7 +100,7 @@
     "nameData": "PorcionPulled",
     "precio": 200,
     "id": "13",
-     "img": "img/porcion pulled.jpg",
+     "img": "img/PPulled.jpg",
      "especial": false
     },
     {
@@ -108,7 +108,7 @@
     "nameData": "Bebida",
     "precio": 80,
     "id": "14",
-    "img": "",
+    "img": "img/bebidas.jpg",
     "especial": false
     },
     {
