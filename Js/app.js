@@ -184,26 +184,26 @@ fetch(url)
     })
     // Boton para terminar la comanda y guardarla en el sessionStorage
     termOrd.addEventListener('click',()=>{
-        if(sessionStorage.getItem('ordenes') === null){
+        if(localStorage.getItem('ordenes') === null){
             let ordenes = [];
 
             ordenes.push(orden)
-            sessionStorage.setItem('ordenes',JSON.stringify(ordenes))
+            localStorage.setItem('ordenes',JSON.stringify(ordenes))
             orden = [];
         }else{
-            let ordenes = JSON.parse(sessionStorage.getItem('ordenes'))
+            let ordenes = JSON.parse(localStorage.getItem('ordenes'))
 
             ordenes.push(orden)
             // ordenes.push(orden);
-            sessionStorage.setItem('ordenes','')
-            sessionStorage.setItem('ordenes',JSON.stringify(ordenes))
+            localStorage.setItem('ordenes','')
+            localStorage.setItem('ordenes',JSON.stringify(ordenes))
             orden = [];
         }
     })
     // Boton para ver el listado de las comandas del dia
     listaOrds.addEventListener('click',()=>{
         let totDia = 0;
-        let ordenes = JSON.parse(sessionStorage.getItem('ordenes')), contToAppend = '';
+        let ordenes = JSON.parse(localStorage.getItem('ordenes')), contToAppend = '';
 
         divCommandasDia.innerHTML = ' ';
         ordenes.forEach(comm => {
