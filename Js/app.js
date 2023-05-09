@@ -10,7 +10,7 @@ let fshord = document.querySelector('#totBtn');
 let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden'), offCOrds = document.querySelector('.offcanvas-body-ordenes'),divTotDia = document.querySelector('.totDia'), divCommandasDia = document.querySelector('.comandasDia')
 
 // Array para los controles especiales
-let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza'];
+let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza','Comb1','Comb2'];
 
 
 fetch(url)
@@ -33,9 +33,9 @@ fetch(url)
                 </div>
                 <div class='commands col-7' id="${burg.id}">
                     <form id="commandsForm-${burg.id}" action="" method="POST" class="column form">
-                        <button type="submit" name="ag" class="btnAgregar" data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btnAgregarCP esp d-none" data-price="${burg.precio}+50" data-name="${burg.nameData}" >Agregar c/p </button>
-                        <input id="extraC-${burg.nameData}" name="extCarne" class="extra esp d-none" type="number" placeholder="Carne extra" list="exC" ></input>
+                        <button type="submit" name="ag" class="btnAgregar esp" data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
+                        <button type="submit" name="agcp" class="btnAgregarCP d-none" data-price="${burg.precio}+50" data-name="${burg.nameData}" >Agregar c/p </button>
+                        <input id="extraC-${burg.nameData}" name="extCarne" class="extra" type="number" placeholder="Carne extra" list="exC" disabled ></input>
                         <datalist id="exC">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -178,7 +178,7 @@ fetch(url)
         </div>
         <br><hr><br> 
         <div class="totComanda">
-        Total= $${tot}<br> Debito= $${tot*1.05}
+        Total= $${tot}<br> Debito= $${tot*1.03}
         </div><br>`;
         ornedToAppend = ''
     })

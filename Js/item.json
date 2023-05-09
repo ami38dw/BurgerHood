@@ -32,20 +32,20 @@
      "especial": false
     },
     {
-     "name": "Red hot",
-     "nameData": "RedHot",
-     "precio": 280,
-     "id": "05",
-     "img": "",
-     "especial": false
-    },
-    {
      "name": "Oklahoma",
      "nameData": "Oklahoma",
      "precio": 375,
      "id": "06",
      "img": "img/oklahoma.jpg",
      "especial": true
+    },
+    {
+    "name": "Monster",
+    "nameData": "Monster",
+    "precio": 345,
+    "id": "09",
+    "img": "img/monster.jpg",
+    "especial": true
     },
     {
      "name": "Patty Melt",
@@ -64,12 +64,20 @@
      "especial": true
     },
     {
-     "name": "Monster",
-     "nameData": "Monster",
-     "precio": 345,
-     "id": "09",
-     "img": "img/monster.jpg",
-     "especial": true
+    "name": "Especial del mes",
+    "nameData": "EspMes",
+    "precio": 300,
+    "id": "16",
+    "img": "",
+    "especial": true
+    },
+    {
+     "name": "Red hot",
+     "nameData": "RedHot",
+     "precio": 280,
+     "id": "05",
+     "img": "img/redhot.jpg",
+     "especial": false
     },
     {
      "name": "Veggie",
@@ -101,6 +109,22 @@
     "precio": 200,
     "id": "13",
      "img": "img/PPulled.jpg",
+     "especial": false
+    },
+    {
+    "name": "Combo 1",
+    "nameData": "Comb1",
+    "precio": 650,
+    "id": "17",
+    "img": "",
+    "especial": false
+    },
+    {
+    "name": "Combo 2",
+    "nameData": "Comb2",
+    "precio": 850,
+    "id": "18",
+     "img": "",
      "especial": false
     },
     {
