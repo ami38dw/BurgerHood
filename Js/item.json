@@ -112,17 +112,17 @@
      "especial": false
     },
     {
-    "name": "Combo 1",
+    "name": "Combo Chill",
     "nameData": "Comb1",
-    "precio": 650,
+    "precio": 700,
     "id": "17",
     "img": "",
     "especial": false
     },
     {
-    "name": "Combo 2",
+    "name": "Combo Boom",
     "nameData": "Comb2",
-    "precio": 850,
+    "precio": 900,
     "id": "18",
      "img": "",
      "especial": false
@@ -130,7 +130,7 @@
     {
     "name": "Bebida",
     "nameData": "Bebida",
-    "precio": 80,
+    "precio": 90,
     "id": "14",
     "img": "img/bebidas.jpg",
     "especial": false
