@@ -7,7 +7,7 @@ let btnAgregearCP = document.querySelector('.btnAgregarCP');
 let CarExtra = document.querySelector('.extra');
 let arrayEspeciales = [];
 let fshord = document.querySelector('#totBtn');
-let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden'), offCOrds = document.querySelector('.offcanvas-body-ordenes'),divTotDia = document.querySelector('.totDia'), divCommandasDia = document.querySelector('.comandasDia')
+let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden'), offCOrds = document.querySelector('.offcanvas-body-ordenes'),divTotDia = document.querySelector('.totDia'), divCommandasDia = document.querySelector('.comandasDia'), btnDelete = document.querySelector('#btnDelete')
 
 // Array para los controles especiales
 let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza','Comb1','Comb2'];
@@ -199,6 +199,11 @@ fetch(url)
             localStorage.setItem('ordenes',JSON.stringify(ordenes))
             orden = [];
         }
+    })
+    // Boton para limpiar el Local storage de la pagina
+    btnDelete.addEventListener('click', ()=>{
+        localStorage.removeItem('ordenes')
+        location.reload()
     })
     // Boton para ver el listado de las comandas del dia
     listaOrds.addEventListener('click',()=>{
