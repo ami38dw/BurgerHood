@@ -72,15 +72,15 @@ body{
     width:35%;
 }
 .btnAgregar{
-    border: solid #d6ab48df 2px;
-    background-color: #fbc954d6;
+    border: solid #d6ab48df 2px !important;
+    background-color: #fbc954d6 !important;
     border-radius: 5px;
     font-size: 0.9em;
     font-weight: 300;
 }
 .btnAgregarCP{
-    border: solid #d6ab48df 2px;
-    background-color: #fbc954d6;
+    border: solid #d6ab48df 2px !important;
+    background-color: #fbc954d6 !important;
     border-radius: 5px;
     font-size: 0.9em;
     font-weight: 500;
@@ -167,7 +167,7 @@ body{
     height: 40px;
 }
 .btnDelete{
-    background-color: #ca3a1670;
+    background-color: #bb623e78;
     padding: 2px 5px;
     border-radius: 10px;
     border: 1px solid #ca3a16;

@@ -33,8 +33,13 @@ fetch(url)
                 </div>
                 <div class='commands col-7' id="${burg.id}">
                     <form id="commandsForm-${burg.id}" action="" method="POST" class="column form">
-                        <button type="submit" name="ag" class="btnAgregar esp" data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btnAgregarCP d-none" data-price="${burg.precio}+50" data-name="${burg.nameData}" >Agregar c/p </button>
+
+
+
+                        <button type="submit" name="ag" class="btn btn-sm btnAgregar esp" data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
+                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP d-none" data-price="${burg.precio}+50" data-name="${burg.nameData}" >Agregar c/p </button>
+
+
                         <input id="extraC-${burg.nameData}" name="extCarne" class="extra" type="number" placeholder="Carne extra" list="exC" disabled ></input>
                         <datalist id="exC">
                             <option value="1">1</option>
@@ -57,8 +62,8 @@ fetch(url)
                 </div>
                 <div class='commands col-7' id="${burg.id}">
                     <form id="commandsForm-${burg.id}" action="" method="POST" class="column form">
-                        <button type="submit" name="ag" class="btnAgregar " data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btnAgregarCP " data-price="${burg.precio}+50" data-name="${burg.nameData}">Agregar c/p </button>
+                        <button type="submit" name="ag" class="btn btn-sm btnAgregar " data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
+                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP " data-price="${burg.precio}+50" data-name="${burg.nameData}">Agregar c/p </button>
                         <input id="extraC-${burg.nameData}" name="extCarne" class="extra " type="number" placeholder="Carne extra" list="exC"></input>
                         <datalist id="exC">
                             <option value="1">1</option>
@@ -92,8 +97,9 @@ fetch(url)
         form.firstElementChild[0].addEventListener('click', ()=>{
             namedata = form.firstElementChild[0].dataset.namedata
             extC = document.querySelector(`#extraC-${namedata}`).value
-            console.log(namedata);
+            console.log(form);
 
+            form.firstElementChild[0].classList.add('active');
             if(extC === ''){
                 orden.push({
                     'namedata': namedata,
@@ -118,7 +124,7 @@ fetch(url)
                     })
                 }
             }
-            
+            form.firstElementChild[0].classList.remove('active');
             // console.log(orden);
         });
         
