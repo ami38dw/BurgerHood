@@ -66,10 +66,10 @@
     {
     "name": "Especial del mes",
     "nameData": "EspMes",
-    "precio": 320,
+    "precio": 300,
     "id": "16",
     "img": "",
-    "especial": true
+    "especial": false
     },
     {
      "name": "Red hot",
@@ -104,6 +104,30 @@
      "especial": false
     },
     {
+    "name": "PapasChedar",
+    "nameData": "PorcionPapasChedar",
+    "precio": 200,
+    "id": "21",
+     "img": "",
+     "especial": false
+    },
+    {
+    "name": "Papas C.B.",
+    "nameData": "PorcionPapasChedarBaicon",
+    "precio": 250,
+    "id": "22",
+     "img": "",
+     "especial": false
+    },
+    {
+    "name": "PapasBunker",
+    "nameData": "PorcionPapasBunker",
+    "precio": 300,
+    "id": "23",
+     "img": "",
+     "especial": false
+    },
+    {
     "name": "Porcion Pulled",
     "nameData": "PorcionPulled",
     "precio": 200,
@@ -128,6 +152,14 @@
      "especial": false
     },
     {
+    "name": "ComboBajonero",
+    "nameData": "CombBajonero",
+    "precio": 950,
+    "id": "19",
+     "img": "",
+     "especial": false
+    },
+    {
     "name": "Bebida",
     "nameData": "Bebida",
     "precio": 90,
@@ -140,6 +172,14 @@
     "nameData": "Cerveza",
     "precio": 100,
     "id": "15",
+    "img": "",
+    "especial": false
+    },
+    {
+    "name": "Postre",
+    "nameData": "Postre",
+    "precio": 100,
+    "id": "20",
     "img": "",
     "especial": false
     }
