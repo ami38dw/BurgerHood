@@ -10,7 +10,7 @@ let fshord = document.querySelector('#totBtn');
 let offCBody = document.querySelector('#offcanvas-body'), listaOrds = document.querySelector('#verOrds'), termOrd = document.querySelector('#terminarOrden'), offCOrds = document.querySelector('.offcanvas-body-ordenes'),divTotDia = document.querySelector('.totDia'), divCommandasDia = document.querySelector('.comandasDia'), btnDelete = document.querySelector('#btnDelete')
 
 // Array para los controles especiales
-let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza','Comb1','Comb2'];
+let comandosEspeciales = ['Bebida','PorcionPapas','PorcionPulled','Cerveza','Comb1','Comb2','CombBajonero','PorcionPapasChedar','PorcionPapasChedarBaicon','PorcionPapasBunker','Postre'];
 
 
 fetch(url)
