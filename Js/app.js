@@ -37,7 +37,7 @@ fetch(url)
 
 
                         <button type="submit" name="ag" class="btn btn-sm btnAgregar esp" data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP d-none" data-price="${burg.precio}+50" data-name="${burg.nameData}" >Agregar c/p </button>
+                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP d-none" data-price="${burg.precio}+60" data-name="${burg.nameData}" >Agregar c/p </button>
 
 
                         <input id="extraC-${burg.nameData}" name="extCarne" class="extra" type="number" placeholder="Carne extra" list="exC" disabled ></input>
@@ -63,7 +63,7 @@ fetch(url)
                 <div class='commands col-7' id="${burg.id}">
                     <form id="commandsForm-${burg.id}" action="" method="POST" class="column form">
                         <button type="submit" name="ag" class="btn btn-sm btnAgregar " data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP " data-price="${burg.precio}+50" data-name="${burg.nameData}">Agregar c/p </button>
+                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP " data-price="${burg.precio}+60" data-name="${burg.nameData}">Agregar c/p </button>
                         <input id="extraC-${burg.nameData}" name="extCarne" class="extra " type="number" placeholder="Carne extra" list="exC"></input>
                         <datalist id="exC">
                             <option value="1">1</option>
@@ -112,14 +112,14 @@ fetch(url)
                     orden.push({
                         'namedata': namedata,
                         'hamburgesa': namedata,
-                        'precio': parseInt(form.firstElementChild[0].dataset.price)+130*extC,
+                        'precio': parseInt(form.firstElementChild[0].dataset.price)+140*extC,
                         'carneExtra': extC,
                     })
                 }else {
                     orden.push({
                         'namedata': namedata,
                         'hamburgesa': namedata,
-                        'precio': parseInt(form.firstElementChild[0].dataset.price)+65*extC,
+                        'precio': parseInt(form.firstElementChild[0].dataset.price)+70*extC,
                         'carneExtra': extC,
                     })
                 }
@@ -137,7 +137,7 @@ fetch(url)
                 orden.push({
                     'namedata': namedata,
                     'hamburgesa': namedata + ' c/p',
-                    'precio': parseInt(form.firstElementChild[0].dataset.price)+50,
+                    'precio': parseInt(form.firstElementChild[0].dataset.price)+60,
                     'carneExtra': 0,
                 })
             }else {
@@ -145,14 +145,14 @@ fetch(url)
                     orden.push({
                         'namedata': namedata,
                         'hamburgesa': namedata+' c/p',
-                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(130*extC)+50,
+                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(130*extC)+60,
                         'carneExtra': extC,
                     })
                 }else {
                     orden.push({
                         'namedata': namedata,
                         'hamburgesa': namedata + ' c/p',
-                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(65*extC)+50,
+                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(65*extC)+60,
                         'carneExtra': extC,
                     })
                 }
@@ -164,6 +164,7 @@ fetch(url)
         
     });
     // Boton de terminar la orden
+    let numOrd = 0;
     fshord.addEventListener('click', ()=>{
         sessionStorage.setItem('Orden',JSON.stringify(orden));
         let tot = 0;
@@ -178,6 +179,8 @@ fetch(url)
             }
             tot += parseInt(com.precio)
         }
+        // numOrd ++
+        // Orden Num:${numOrd} <br>
         offCBody.innerHTML = `
         <div class="comanda">
         ${ornedToAppend}
