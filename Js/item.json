@@ -72,6 +72,14 @@
     "especial": false
     },
     {
+    "name": "Hueverly",
+    "nameData": "Huevelry",
+    "precio": 360,
+    "id": "25",
+    "img": "",
+    "especial": true
+    },
+    {
      "name": "Red hot",
      "nameData": "RedHot",
      "precio": 280,
@@ -176,7 +184,7 @@
     "especial": false
     },
     {
-    "name": "Cerveza Artesanal",
+    "name": "CervezaArtt",
     "nameData": "CervezaArtt",
     "precio": 180,
     "id": "24",
@@ -186,7 +194,7 @@
     {
     "name": "Postre",
     "nameData": "Postre",
-    "precio": 100,
+    "precio": 120,
     "id": "20",
     "img": "",
     "especial": false
