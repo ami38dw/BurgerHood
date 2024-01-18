@@ -170,7 +170,7 @@
     {
     "name": "Bebida",
     "nameData": "Bebida",
-    "precio": 90,
+    "precio": 100,
     "id": "14",
     "img": "img/bebidas.jpg",
     "especial": false
