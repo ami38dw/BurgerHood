@@ -125,6 +125,9 @@ body{
     border-radius: 8px;
     font-size: 1em;
 }
+#offcanvasExample{
+    background-color: rgba(0, 0, 0, 0.67);
+}
 .totComanda{
     text-align: end;
 }
@@ -154,7 +157,7 @@ body{
     padding: 0% 5%;
 }
 .offcanvas-body-ordenes{
-    background-color: #b79f1970;
+    background-color: #b79f19;
     font-size: 1em;
     height: auto;
     overflow-y: scroll;

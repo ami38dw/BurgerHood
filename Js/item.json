@@ -2,7 +2,7 @@
     {
      "name": "Hood",
      "nameData": "Hood",
-     "precio": 320,
+     "precio": 340,
      "id": "01",
      "img": "img/hood.jpg",
      "especial": false
@@ -10,7 +10,7 @@
     {
      "name": "Yankee",
      "nameData": "Yankee",
-     "precio": 290,
+     "precio": 310,
      "id": "02",
      "img": "img/yankee.jpg",
      "especial": false
@@ -18,7 +18,7 @@
     {
      "name": "A y C",
      "nameData": "AyC",
-     "precio": 290,
+     "precio": 300,
      "id": "03",
      "img": "img/ayc.jpg",
      "especial": false
@@ -26,7 +26,7 @@
     {
      "name": "Cheese",
      "nameData": "Cheese",
-     "precio": 300,
+     "precio": 320,
      "id": "04",
      "img": "img/Cheese.jpg",
      "especial": false
@@ -34,7 +34,7 @@
     {
      "name": "Oklahoma",
      "nameData": "Oklahoma",
-     "precio": 390,
+     "precio": 400,
      "id": "06",
      "img": "img/oklahoma.jpg",
      "especial": true
@@ -42,7 +42,7 @@
     {
     "name": "Monster",
     "nameData": "Monster",
-    "precio": 360,
+    "precio": 380,
     "id": "09",
     "img": "img/monster.jpg",
     "especial": true
@@ -50,7 +50,7 @@
     {
      "name": "Patty Melt",
      "nameData": "PattyMelt",
-     "precio": 400,
+     "precio": 420,
      "id": "07",
      "img": "img/patty.jpg",
      "especial": true
@@ -58,7 +58,7 @@
     {
      "name": "Pulled Pork",
      "nameData": "PulledPork",
-     "precio": 250,
+     "precio": 270,
      "id": "08",
      "img": "img/pulledPork.jpg",
      "especial": true
@@ -82,7 +82,7 @@
     {
      "name": "Red hot",
      "nameData": "RedHot",
-     "precio": 280,
+     "precio": 300,
      "id": "05",
      "img": "img/redhot.jpg",
      "especial": false
@@ -90,7 +90,7 @@
     {
      "name": "Veggie",
      "nameData": "Veggie",
-     "precio": 260,
+     "precio": 280,
      "id": "10",
      "img": "",
      "especial": false
@@ -98,7 +98,7 @@
     {
      "name": "Kid",
      "nameData": "Kid",
-     "precio": 210,
+     "precio": 220,
      "id": "11",
      "img": "",
      "especial": false
@@ -106,7 +106,7 @@
     {
     "name": "Porcion Papas",
     "nameData": "PorcionPapas",
-    "precio": 145,
+    "precio": 160,
     "id": "12",
      "img": "",
      "especial": false
@@ -114,13 +114,13 @@
     {
     "name": "PapasChedar",
     "nameData": "PorcionPapasChedar",
-    "precio": 250,
+    "precio": 270,
     "id": "21",
      "img": "",
      "especial": false
     },
     {
-    "name": "Papas C.B.",
+    "name": "Papas Ch.B.",
     "nameData": "PorcionPapasChedarBaicon",
     "precio": 300,
     "id": "22",
@@ -130,7 +130,7 @@
     {
     "name": "PapasBunker",
     "nameData": "PorcionPapasBunker",
-    "precio": 300,
+    "precio": 320,
     "id": "23",
      "img": "",
      "especial": false
@@ -138,15 +138,23 @@
     {
     "name": "Porcion Pulled",
     "nameData": "PorcionPulled",
-    "precio": 250,
+    "precio": 270,
     "id": "13",
      "img": "img/PPulled.jpg",
      "especial": false
     },
     {
+    "name": "Triangulos",
+    "nameData": "TrigMuzz",
+    "precio": 120,
+    "id": "15",
+    "img": "",
+    "especial": false
+    },
+    {
     "name": "Combo Chill",
     "nameData": "Comb1",
-    "precio": 750,
+    "precio": 790,
     "id": "17",
     "img": "",
     "especial": false
@@ -154,7 +162,7 @@
     {
     "name": "Combo Boom",
     "nameData": "Comb2",
-    "precio": 950,
+    "precio": 990,
     "id": "18",
      "img": "",
      "especial": false
@@ -170,17 +178,9 @@
     {
     "name": "Bebida",
     "nameData": "Bebida",
-    "precio": 100,
+    "precio": 120,
     "id": "14",
     "img": "img/bebidas.jpg",
-    "especial": false
-    },
-    {
-    "name": "Cerveza",
-    "nameData": "Cerveza",
-    "precio": 120,
-    "id": "15",
-    "img": "",
     "especial": false
     },
     {
