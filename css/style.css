@@ -157,9 +157,9 @@ body{
     padding: 0% 5%;
 }
 .offcanvas-body-ordenes{
-    background-color: #b79f19;
+    background-color: #fbc954a2;
     font-size: 1em;
-    height: auto;
+    height: 100%;
     overflow-y: scroll;
 }
 .sumParcial{
@@ -171,7 +171,8 @@ body{
 }
 .btnDelete{
     background-color: #bb623e78;
-    padding: 2px 5px;
+    padding: 2px 8px;
+    margin-right: 12%;
     border-radius: 10px;
     border: 1px solid #ca3a16;
 }
