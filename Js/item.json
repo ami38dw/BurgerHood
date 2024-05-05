@@ -66,7 +66,7 @@
     {
     "name": "Especial del mes",
     "nameData": "EspMes",
-    "precio": 320,
+    "precio": 300,
     "id": "16",
     "img": "",
     "especial": false
@@ -148,6 +148,14 @@
     "nameData": "TrigMuzz",
     "precio": 300,
     "id": "15",
+    "img": "",
+    "especial": false
+    },
+    {
+    "name": "Triangulos chicos",
+    "nameData": "TrigMuzzChica",
+    "precio": 120,
+    "id": "24",
     "img": "",
     "especial": false
     },
