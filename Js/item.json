@@ -160,6 +160,14 @@
     "especial": false
     },
     {
+    "name": "Promo DIA",
+    "nameData": "PromDia",
+    "precio": 350,
+    "id": "27",
+    "img": "",
+    "especial": false
+    },
+    {
     "name": "Combo Chill",
     "nameData": "Comb1",
     "precio": 790,
@@ -195,7 +203,7 @@
     "name": "CervezaArtt",
     "nameData": "CervezaArtt",
     "precio": 180,
-    "id": "24",
+    "id": "26",
     "img": "",
     "especial": false
     },
