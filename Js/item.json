@@ -1,3 +1,4 @@
+
 [
     {
      "name": "Hood",
@@ -66,7 +67,7 @@
     {
     "name": "Especial del mes",
     "nameData": "EspMes",
-    "precio": 300,
+    "precio": 350,
     "id": "16",
     "img": "",
     "especial": false
@@ -156,14 +157,6 @@
     "nameData": "TrigMuzzChica",
     "precio": 120,
     "id": "24",
-    "img": "",
-    "especial": false
-    },
-    {
-    "name": "Promo DIA",
-    "nameData": "PromDia",
-    "precio": 350,
-    "id": "27",
     "img": "",
     "especial": false
     },
