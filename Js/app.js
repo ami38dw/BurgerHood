@@ -37,7 +37,7 @@ fetch(url)
 
 
                         <button type="submit" name="ag" class="btn btn-sm btnAgregar esp" data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP d-none" data-price="${burg.precio}+60" data-name="${burg.nameData}" >Agregar c/p </button>
+                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP d-none" data-price="${burg.precio}+75" data-name="${burg.nameData}" >Agregar c/p </button>
 
 
                         <input display="none" id="extraC-${burg.nameData}" name="extCarne" class="extra" type="number" placeholder="Carne extra" list="exC" disabled ></input>
@@ -63,7 +63,7 @@ fetch(url)
                 <div class='commands col-7' id="${burg.id}">
                     <form id="commandsForm-${burg.id}" action="" method="POST" class="column form">
                         <button type="submit" name="ag" class="btn btn-sm btnAgregar " data-price="${burg.precio}" data-nameData="${burg.nameData}">Agregar </button>
-                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP " data-price="${burg.precio}+60" data-name="${burg.nameData}">Agregar c/p </button>
+                        <button type="submit" name="agcp" class="btn btn-sm btnAgregarCP " data-price="${burg.precio}+75" data-name="${burg.nameData}">Agregar c/p </button>
                         <input id="extraC-${burg.nameData}" name="extCarne" class="extra " type="number" placeholder="Carne extra" list="exC"></input>
                         <datalist id="exC">
                             <option value="1">1</option>
@@ -119,7 +119,7 @@ fetch(url)
                     orden.push({
                         'namedata': namedata,
                         'hamburgesa': namedata,
-                        'precio': parseInt(form.firstElementChild[0].dataset.price)+70*extC,
+                        'precio': parseInt(form.firstElementChild[0].dataset.price)+85*extC,
                         'carneExtra': extC,
                     })
                 }
@@ -137,7 +137,7 @@ fetch(url)
                 orden.push({
                     'namedata': namedata,
                     'hamburgesa': namedata + ' c/p',
-                    'precio': parseInt(form.firstElementChild[0].dataset.price)+60,
+                    'precio': parseInt(form.firstElementChild[0].dataset.price)+75,
                     'carneExtra': 0,
                 })
             }else {
@@ -145,14 +145,14 @@ fetch(url)
                     orden.push({
                         'namedata': namedata,
                         'hamburgesa': namedata+' c/p',
-                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(130*extC)+60,
+                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(130*extC)+75,
                         'carneExtra': extC,
                     })
                 }else {
                     orden.push({
                         'namedata': namedata,
                         'hamburgesa': namedata + ' c/p',
-                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(65*extC)+60,
+                        'precio': parseInt(form.firstElementChild[0].dataset.price)+(85*extC)+75,
                         'carneExtra': extC,
                     })
                 }
