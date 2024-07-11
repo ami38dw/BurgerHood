@@ -220,14 +220,14 @@ fetch(url)
     listaOrds.addEventListener('click',()=>{
         let totDia = 0;
         let ordenes = JSON.parse(localStorage.getItem('ordenes')), contToAppend = '';
-        // let numOrd = 1;
+        let numOrd = 1;
 
         divCommandasDia.innerHTML = ' ';
         ordenes.forEach(comm => {
             let sumParcial = 0
             if(comm.length > 1){
                 contToAppend = '';
-                // contToAppend += `Orden ${numOrd}<br><br>`;
+                contToAppend += `<b>Orden ${numOrd}</b><br>`;
                 comm.forEach(burg => {
                     if(burg.carneExtra === 0){
                         contToAppend += `${burg.hamburgesa} &emsp;&emsp;$${burg.precio} <br>`    
@@ -237,12 +237,12 @@ fetch(url)
                     totDia += parseInt(burg.precio)
                     sumParcial += parseInt(burg.precio)
                 })
-                // numOrd++;
+                numOrd++;
                 divTotDia.innerHTML = `Total del dia $${totDia}`;
                 divCommandasDia.innerHTML += `<hr><div>${contToAppend} <span class='sumParcial'> Sub Total $${sumParcial}</span></div><hr>`;
             }else{
                 contToAppend = '';
-                // contToAppend += `Orden ${numOrd}<br><br>`;
+                contToAppend += `<b>Orden ${numOrd}</b><br>`;
                 if(comm[0].carneExtra === 0){
                     contToAppend += `${comm[0].hamburgesa} &emsp;&emsp;$${comm[0].precio} <br>`
                 }else{
@@ -251,7 +251,7 @@ fetch(url)
                 totDia += parseInt(comm[0].precio);
                 divTotDia.innerHTML = `Total del dia $${totDia}`;
                 divCommandasDia.innerHTML += `<hr><br>${contToAppend} <hr>`;
-                // numOrd++;
+                numOrd++;
             }
         })
     })
