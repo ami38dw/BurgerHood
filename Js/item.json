@@ -69,15 +69,15 @@
     "nameData": "EspMes",
     "precio": 340,
     "id": "16",
-    "img": "",
+    "img": "img/EspMes.jpg",
     "especial": false
     },
     {
     "name": "Hueverly",
     "nameData": "Huevelry",
-    "precio": 360,
+    "precio": 380,
     "id": "25",
-    "img": "",
+    "img": "img/Hueverly-1.jpg",
     "especial": true
     },
     {
@@ -93,7 +93,7 @@
      "nameData": "Veggie",
      "precio": 280,
      "id": "10",
-     "img": "",
+     "img": "img/veggie.jpg",
      "especial": false
     },
     {
@@ -101,7 +101,7 @@
      "nameData": "Kid",
      "precio": 220,
      "id": "11",
-     "img": "",
+     "img": "img/Kid.jpg",
      "especial": false
     },
     {
@@ -149,7 +149,7 @@
     "nameData": "TrigMuzz",
     "precio": 300,
     "id": "15",
-    "img": "",
+    "img": "img/Triangulos.jpg",
     "especial": false
     },
     {
@@ -157,6 +157,14 @@
     "nameData": "TrigMuzzChica",
     "precio": 120,
     "id": "24",
+    "img": "img/Triangulos.jpg",
+    "especial": false
+    },
+    {
+    "name": "Papas Chicas",
+    "nameData": "PapasChicas",
+    "precio": 50,
+    "id": "29",
     "img": "",
     "especial": false
     },
@@ -165,7 +173,7 @@
     "nameData": "Comb1",
     "precio": 790,
     "id": "17",
-    "img": "",
+    "img": "img/Combos1y2.jpg",
     "especial": false
     },
     {
@@ -173,7 +181,7 @@
     "nameData": "Comb2",
     "precio": 990,
     "id": "18",
-     "img": "",
+     "img": "img/Combos1y2.jpg",
      "especial": false
     },
     {
