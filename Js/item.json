@@ -11,7 +11,7 @@
     {
      "name": "Yankee",
      "nameData": "Yankee",
-     "precio": 310,
+     "precio": 320,
      "id": "02",
      "img": "img/yankee.jpg",
      "especial": false
@@ -19,7 +19,7 @@
     {
      "name": "A y C",
      "nameData": "AyC",
-     "precio": 300,
+     "precio": 310,
      "id": "03",
      "img": "img/ayc.jpg",
      "especial": false
@@ -27,7 +27,7 @@
     {
      "name": "Cheese",
      "nameData": "Cheese",
-     "precio": 320,
+     "precio": 330,
      "id": "04",
      "img": "img/Cheese.jpg",
      "especial": false
@@ -67,7 +67,7 @@
     {
     "name": "Especial del mes",
     "nameData": "EspMes",
-    "precio": 340,
+    "precio": 280,
     "id": "16",
     "img": "img/EspMes.jpg",
     "especial": false
@@ -83,7 +83,7 @@
     {
      "name": "Red hot",
      "nameData": "RedHot",
-     "precio": 300,
+     "precio": 310,
      "id": "05",
      "img": "img/redhot.jpg",
      "especial": false
@@ -107,7 +107,7 @@
     {
     "name": "Porcion Papas",
     "nameData": "PorcionPapas",
-    "precio": 160,
+    "precio": 180,
     "id": "12",
      "img": "",
      "especial": false
@@ -115,7 +115,7 @@
     {
     "name": "PapasChedar",
     "nameData": "PorcionPapasChedar",
-    "precio": 270,
+    "precio": 280,
     "id": "21",
      "img": "",
      "especial": false
@@ -139,7 +139,7 @@
     {
     "name": "Porcion Pulled",
     "nameData": "PorcionPulled",
-    "precio": 270,
+    "precio": 280,
     "id": "13",
      "img": "img/PPulled.jpg",
      "especial": false
@@ -171,7 +171,7 @@
     {
     "name": "Combo Chill",
     "nameData": "Comb1",
-    "precio": 790,
+    "precio": 799,
     "id": "17",
     "img": "img/Combos1y2.jpg",
     "especial": false
@@ -179,7 +179,7 @@
     {
     "name": "Combo Boom",
     "nameData": "Comb2",
-    "precio": 990,
+    "precio": 999,
     "id": "18",
      "img": "img/Combos1y2.jpg",
      "especial": false
